@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homework 4th</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<style>
+					div#class1 {
+						border-style: ridge;
+						border-width: 5px;
+						position: relative;
+					}
+					p {
+						font-size: 24px;
+						font-family: Impact;
+						color: black;
+						background-color: white;
+					}
+					td {
+						font-weight: bold;
+					}
+				</style>
+	</head>
+	<body class="bg-danger">
+	<h1 align="center">STUDENT'S CLASSIFICATIONS</h1>
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4" id="class1" align="center">
+		<div>
+		<table>
+			<tr>
+				<td>1st Quarter: </td>
+				<td><input id="id1" size="2"></td><br>
+			</tr>
+			<tr>
+				<td>2nd Quarter: </td>
+				<td><input id="id2" size="2"></td><br>
+			</tr>
+			<tr>
+				<td>3rd Quarter: </td>
+				<td><input id="id3" size="2"></td><br>
+			</tr>
+			<tr>
+				<td>4th Quarter: </td>
+				<td><input id="id4" size="2"></td>
+			</tr>
+		</table><br>
+		</div>
+		<div align="center">
+			<button type="button" onclick="myFunction()" class="btn btn-success btn-lg">Check</button>
+5				<p id="id5"></p>
+		</div>
+	</div>
+	<div class="col-lg-4"></div>
+		<script>
+			function myFunction() {
+			
+				var grade_1 = document.getElementById("id1").value;
+				var grade_2 = document.getElementById("id2").value;
+				var grade_3 = document.getElementById("id3").value;
+				var grade_4 = document.getElementById("id4").value;
+					var sum1 = Number(grade_1) + Number(grade_2) + Number(grade_3) + Number(grade_4);
+					var averageGrade= sum1/4;
+					var text1;
+						if (averageGrade>=94 && averageGrade<=100) {
+							text1 = "Bergamo 1";
+						} else if (averageGrade>=87 && averageGrade<=93) {
+							text1 = "Bergamo 2";
+						} else if (averageGrade>=80 && averageGrade<=86) {
+							text1 = "Bergamo 3";
+						} else if (averageGrade>=75 && averageGrade<=79) {
+							text1 = "Perugia 1";
+						} else if (averageGrade>=65 && averageGrade<=74) {
+							text1 = "Perugia 2";
+						} else {
+							text1 = "Invalid Grade";
+						}
+						document.getElementById("id5").innerHTML = text1;
+			}
+		/*	94-100 	= 	B1
+			87-93 	=	B2
+			80-86 	= 	B3
+			75-79 	=	P1
+			65-74 	=	P2 	*/
+		</script>
+	</body>
+</html>
